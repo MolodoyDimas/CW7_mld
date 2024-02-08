@@ -18,28 +18,19 @@ from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-dot_env = os.path.join(BASE_DIR / '.env', )
-load_dotenv(dotenv_path=dot_env)
 
-
-def get_env_value(env_var):
-    try:
-        return os.environ[env_var]
-    except KeyError:
-        error_msg = f'Установите переменную {env_var} env в файле ".env".'
-        raise ImproperlyConfigured(error_msg)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_env_value('SECRET_KEY')
+SECRET_KEY = "django-insecure-nn61ns(4d)7*k-g&9t63z+r1mfuhe8wgvo1g4r5o2)_b%t_s65"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -102,14 +93,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': get_env_value('POSTGRES_ENGINE'),
-        # 'NAME': get_env_value('POSTGRES_NAME'),
-        'NAME': 'postgres',
-        # 'HOST': get_env_value('POSTGRES_HOST'),
-        'HOST': 'db',
-        'USER': get_env_value('POSTGRES_USER'),
-        'PASSWORD': get_env_value('POSTGRES_PASSWORD'),
-        'PORT': get_env_value('POSTGRES_PORT')
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'CW7',
+        'USER':'postgres',
+        'PASSWORD': '65900',
     }
 }
 
@@ -196,5 +183,5 @@ CELERY_BEAT_SCHEDULE = {
 }
 
 TELEGRAM_URL_BOT = 'https://api.telegram.org/bot'
-TELEGRAM_TOKEN = get_env_value('TELEGRAM_TOKEN')
-TELEGRAM_USER_ID = get_env_value('TELEGRAM_USER_ID')
+TELEGRAM_TOKEN = '6919881329:AAHjOqr7Ps8_ChrlcDt5EiN8lHr4BQrgYU8'
+TELEGRAM_USER_ID = '@CW7_MLD_bot'
