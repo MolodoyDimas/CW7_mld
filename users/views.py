@@ -10,7 +10,12 @@ class UserViewSet(viewsets.ModelViewSet):
     Набор представлений для пользовательской модели.
     """
 
+    allowe_http_methods = ["post"] #подсказка
+    permisson_class = [AllowAny] #подсказка
+
     def create(self, request):
+
+
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)

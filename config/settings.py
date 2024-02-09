@@ -13,8 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
-from dotenv import load_dotenv
-from django.core.exceptions import ImproperlyConfigured
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-nn61ns(4d)7*k-g&9t63z+r1mfuhe8wgvo1g4r5o2)_b%t_s65"
+SECRET_KEY = 'django-insecure-=z5q%z+3k+eh%!xb49z+62(0jbe-)@+@5i^iwrw4+272pg)@vc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -94,8 +93,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'CW7',
-        'USER':'postgres',
+        'NAME': 'CW7',
+        'USER': 'postgres',
         'PASSWORD': '65900',
     }
 }
