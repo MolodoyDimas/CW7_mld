@@ -27,7 +27,7 @@ class HabitTestCase(APITestCase):
             user=self.user,
             place="Парк",
             time="12:00",
-            action="Глазеть на жопы",
+            action="Смотреть на огонь",
             time_complete=20,
         )
 
@@ -46,7 +46,7 @@ class HabitTestCase(APITestCase):
             "user": 1,
             "place": "Парк",
             "time": "12:00",
-            "action": "Глазеть на жопы",
+            "action": "Смотреть на огонь",
             "time_complete": 20
         }
 
@@ -79,7 +79,7 @@ class HabitTestCase(APITestCase):
                              "id": 1,
                              "place": "Парк",
                              "time": "12:00:00",
-                             "action": "Глазеть на жопы",
+                             "action": "Смотреть на огонь",
                              "is_pleasant": False,
                              "frequency": 1,
                              "award": None,
@@ -97,7 +97,7 @@ class HabitTestCase(APITestCase):
             "user": 1,
             "place": "Пляж",
             "time": "10:00",
-            "action": "Глазеть на сиськи",
+            "action": "Смотреть на воду",
             "time_complete": 119
         }
 
@@ -112,7 +112,7 @@ class HabitTestCase(APITestCase):
                              "id": 1,
                              "place": "Пляж",
                              "time": "10:00:00",
-                             "action": "Глазеть на сиськи",
+                             "action": "Смотреть на воду",
                              "is_pleasant": False,
                              "frequency": 1,
                              "award": None,
@@ -136,7 +136,7 @@ class HabitTestCase(APITestCase):
                              "id": 1,
                              "place": "Парк",
                              "time": "12:00:00",
-                             "action": "Глазеть на жопы",
+                             "action": "Смотреть на огонь",
                              "is_pleasant": False,
                              "frequency": 1,
                              "award": None,
