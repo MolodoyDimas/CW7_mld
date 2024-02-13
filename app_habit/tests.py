@@ -94,9 +94,9 @@ class HabitTestCase(APITestCase):
 
         # Данные для обновления привычки
         data = {
-            "user": 1,
+            "id": 1,
             "place": "Пляж",
-            "time": "10:00",
+            "time": "2024-02-14T12:00:00+01:00",
             "action": "Смотреть на воду",
             "time_complete": 119
         }
@@ -109,16 +109,16 @@ class HabitTestCase(APITestCase):
         # Проверка корректности выводимых данных
         self.assertEqual(response.json(),
                          {
-                             "id": 1,
+                             "id": 6,
                              "place": "Пляж",
-                             "time": "10:00:00",
+                             "time": "2024-02-14T14:00:00+03:00",
                              "action": "Смотреть на воду",
                              "is_pleasant": False,
                              "frequency": 1,
                              "award": None,
                              "time_complete": 119,
                              "is_public": False,
-                             "user": 1,
+                             "user": 6,
                              "related_habit": None
                          })
 
